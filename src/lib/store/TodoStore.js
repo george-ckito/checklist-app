@@ -14,6 +14,7 @@ todos.subscribe((value) => {
 
 export const addTodo = () => {
 	todos.update((currentTodos) => {
+		console.log({ id: uuidv4(), text: '', complete: false });
 		return [...currentTodos, { id: uuidv4(), text: '', complete: false }];
 	});
 };
