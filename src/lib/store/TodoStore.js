@@ -46,3 +46,7 @@ export const editTodo = (id, text) => {
 		});
 	});
 };
+
+export const removeAll = () => {
+	todos.update((currentTodos) => currentTodos.filter((todo) => todo.id === 'a'));
+};
